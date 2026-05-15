@@ -1,0 +1,46 @@
+name: truss
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+
+  # data wrangling
+  - pandas>=2.2
+  - polars>=1.0
+  - numpy
+  - pyarrow
+  - duckdb
+
+  # classical ML
+  - scikit-learn
+  - xgboost
+
+  # visualization
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # notebook env
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+
+  # quality of life
+  - tqdm
+  - python-dotenv
+
+  # testing
+  - pytest
+  - pytest-cov
+
+  # pip-only packages
+  - pip:
+    - kaggle
+
+# Deferred to later phases (install when you hit them):
+#   Phase 3 baselines: implicit, lightfm
+#   Phase 4 trust/explain: sentence-transformers  (heavy — prefer Colab)
+#   Phase 5 dashboard: streamlit
+#   Phase 6 serving:    fastapi, uvicorn[standard], httpx
