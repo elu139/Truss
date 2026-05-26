@@ -182,7 +182,7 @@ print(
 
 # %% [customer attributes]
 print("Customer age distribution:")
-print(customers.select(pl.col("age").describe()))
+print(customers["age"].describe())  # describe() is a Series method, not an Expr method
 
 print("\nClub member status:")
 print(customers.group_by("club_member_status").agg(pl.len().alias("n")).sort("n", descending=True))
