@@ -8,6 +8,16 @@ Truss is a **trust-aware fashion recommendation system** built on the H&M Person
 
 Where mainstream recommenders maximize short-term clicks, Truss treats **user trust**, **ad fatigue**, **recommendation diversity**, and **explainability** as first-class objectives alongside relevance. The thesis is that you can produce equally relevant recommendations *without* a persistent identity graph, and that doing so improves long-term engagement — a hypothesis we test through simulation.
 
+## 1b. Core Hypothesis
+
+Truss is built on a falsifiable behavioral claim:
+
+> **Repeated exposure to similar recommendations (ad fatigue) causally degrades user trust and engagement. Recommender systems that explicitly model and minimize fatigue should produce *higher* long-term retention than systems that maximize short-term relevance alone — even when the short-term relevance metrics look identical or slightly worse.**
+
+This is not just an engineering goal; it's a position on how humans react cognitively to over-personalized advertising. The project's experimentation layer (Phase 5) is structured around testing this hypothesis with a simulated A/B framework, grounded in published research on ad fatigue, banner blindness, diversity → satisfaction effects, and personalization paradoxes.
+
+Citations and the empirical basis for this claim live in [`docs/research_basis.md`](research_basis.md).
+
 ## 2. Domain
 
 **Choice:** H&M fashion e-commerce.
